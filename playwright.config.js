@@ -50,7 +50,7 @@ module.exports = defineConfig({
       use: { 
         ...devices["Desktop Chrome"],
         browserName:'chromium',
-       headless: false,
+       headless: true,
        ignoreHTTPSErrors: true, // to avoid SSL errors
        permissions:['geolocation'], // if the system request the user to allow to use the location
       trace:'on',
@@ -70,15 +70,15 @@ module.exports = defineConfig({
     // },
 
     {
-      name: 'safari',
-      use: { 
-        ...devices["Desktop Safari"],
-        browserName:'webkit',
-        headless:false,
-        trace:'retain-on-failure',
-        screenshot: 'off',
-        // ...devices['iPhone 11'] // select the device you want to have the specific width and height
-        },
+      // name: 'safari',
+      // use: { 
+      //   ...devices["Desktop Safari"],
+      //   browserName:'webkit',
+      //   headless:false,
+      //   trace:'retain-on-failure',
+      //   screenshot: 'off',
+      //   // ...devices['iPhone 11'] // select the device you want to have the specific width and height
+      //   },
     },
 
     /* Test against mobile viewports. */
