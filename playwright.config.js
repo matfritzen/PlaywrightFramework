@@ -25,7 +25,7 @@ module.exports = defineConfig({
   retries: 2,
   /* Opt out of parallel tests on CI. */
   // workers: process.env.CI ? 1 : undefined,
-  workers: 5, // workers define how many browsers will run parallelly 
+  workers: 1, // workers define how many browsers will run parallelly 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: 'html'
   reporter: "allure-playwright",
@@ -50,7 +50,7 @@ module.exports = defineConfig({
       use: { 
         ...devices["Desktop Chrome"],
         browserName:'chromium',
-       headless: true,
+       headless: false,
        ignoreHTTPSErrors: true, // to avoid SSL errors
        permissions:['geolocation'], // if the system request the user to allow to use the location
       trace:'on',
