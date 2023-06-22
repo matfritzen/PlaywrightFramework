@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 const {customtest} = require("../tests/utils/test-base");
-const { POManager } = require('../pageobjects/POManager');
+const { POManager } = require('../pageObjects/POManager');
 // Json -> string -> js object
 const dataSet = JSON.parse(JSON.stringify(require("../tests/utils/placeorderTestData.json")));
 
