@@ -6,7 +6,8 @@
   "scripts": {
     "regression": "npx playwright test",
     "webTests": "npx playwright test --grep @Web --project=chrome",
-    "APITests": "npx playwright test --grep @API --project=chrome"
+    "APITests": "npx playwright test --grep @API --project=chrome",
+    "CucumberRegression": "npx cucumber-js --tags '@Regression'  --retry 2 --parallel 2 --exit --format html:cucumber-report.html"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "allure-playwright": "^2.4.0"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^9.2.0",
     "allure": "^0.0.0"
   }
 }

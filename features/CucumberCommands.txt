@@ -1,0 +1,17 @@
+
+# Using Cucumber-js package
+
+Command to execute the scenarios by tags
+npx cucumber-js --tags "@Validation" --exit       
+
+Command to execute tests in parallel
+npx cucumber-js features/Ecommerce.feature --parallel 2 --exit
+
+Command to generate Cucumber HTML Report
+npx cucumber-js features/Ecommerce.feature --exit --format html:cucumber-report.html
+
+Command to generate Cucumber JSON Report
+npx cucumber-js features/Ecommerce.feature --exit --format json:cucumber-report.json
+
+Command to add the Retry option for flaky tests
+npx cucumber-js features/Ecommerce.feature --retry 2  --exit
